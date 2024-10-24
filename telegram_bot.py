@@ -12,10 +12,7 @@ bot=telebot.TeleBot(token)
 def  handle_text ( message ):
   if  message.chat.id == 1242255971:
     link = parser.get_link_motherless(message.text)
-    downloader.download(link)
-    video = open('file.mp4', 'rb')
-    bot.send_video(message.chat.id, video)
-    os.remove('file.mp4')
+    bot.send_message(message.chat.id, link)
   else:
     bot.send_message(message.chat.id, 'ERROR')
 

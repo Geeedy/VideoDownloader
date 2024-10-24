@@ -10,6 +10,7 @@ def get_link_motherless(url):
     sourse = webpage.read()
     soup = BeautifulSoup(sourse, "lxml")
     url_ = soup.find('source').get('src')
+    print('parse successfull')
     return url_
 
 
