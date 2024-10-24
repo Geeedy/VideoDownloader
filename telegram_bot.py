@@ -1,7 +1,6 @@
 import telebot
 import time
 import parser
-import downloader
 import os
 
 token='7881010489:AAGzls-74FC0EMlYvvyHNJ9PB24lsVEJEj8'
