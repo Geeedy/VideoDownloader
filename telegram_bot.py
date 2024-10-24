@@ -10,7 +10,7 @@ bot=telebot.TeleBot(token)
 @bot . message_handler ( content_types = [ 'text'])
 def  handle_text ( message ):
   if  message.chat.id == 1242255971:
-    link = parser.get_link_motherless(message.text)
+    link = parser.get_link(message.text)
     bot.send_message(message.chat.id, link)
   else:
     bot.send_message(message.chat.id, 'ERROR')
